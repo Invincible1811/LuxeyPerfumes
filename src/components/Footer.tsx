@@ -77,23 +77,29 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Company & Policies */}
+          {/* Policies */}
           <div>
             <h4 className="text-xs tracking-[0.2em] text-violet-300 uppercase mb-6">
-              Company
+              Policies
             </h4>
             <div className="space-y-3">
               <Link
-                href="/about"
+                href="/policies/terms"
                 className="block text-sm text-gray-500 hover:text-violet-300 transition-colors"
               >
-                Our Story
+                Terms &amp; Conditions
               </Link>
               <Link
-                href="/contact"
+                href="/policies/privacy"
                 className="block text-sm text-gray-500 hover:text-violet-300 transition-colors"
               >
-                Contact Us
+                Privacy Policy
+              </Link>
+              <Link
+                href="/policies/refunds"
+                className="block text-sm text-gray-500 hover:text-violet-300 transition-colors"
+              >
+                Refund / Return / Exchange
               </Link>
               <Link
                 href="/policies/shipping"
@@ -102,16 +108,22 @@ export default function Footer() {
                 Shipping &amp; Delivery
               </Link>
               <Link
-                href="/policies/refunds"
+                href="/policies/legal"
                 className="block text-sm text-gray-500 hover:text-violet-300 transition-colors"
               >
-                Returns &amp; Refunds
+                Contact / Legal Info
               </Link>
               <Link
                 href="/policies/payment"
                 className="block text-sm text-gray-500 hover:text-violet-300 transition-colors"
               >
-                Payment Info
+                Payment Information
+              </Link>
+              <Link
+                href="/policies/cookies"
+                className="block text-sm text-gray-500 hover:text-violet-300 transition-colors"
+              >
+                Cookie Policy
               </Link>
             </div>
           </div>
@@ -123,46 +135,50 @@ export default function Footer() {
             </h4>
             <div className="space-y-3 text-sm text-gray-500">
               <p>
-                Kiravi Street, Asokwa
+                Kiravi Street, Asokwa, Kumasi
                 <br />
-                Kumasi, Ghana
+                Ashanti Region, Ghana
               </p>
               <p>
-                <a href="tel:+233548911324" className="hover:text-violet-300 transition-colors">+233 548 911 324</a>
-                <br />
-                <a href="tel:+2330200211226" className="hover:text-violet-300 transition-colors">+233 020 021 1226</a>
+                <a href="tel:0200211226" className="hover:text-violet-300 transition-colors">0200211226</a>
               </p>
               <p>
                 <a href="mailto:info@luxeyperfumes.com" className="hover:text-violet-300 transition-colors">info@luxeyperfumes.com</a>
               </p>
-              <p className="text-xs text-gray-600 pt-2">
-                Mon–Fri: 8AM–8PM
-                <br />
-                Sun: 11AM–8PM
-                <br />
-                Sat: Closed
+              <p className="text-xs text-violet-400/60 pt-2">
+                Payments secured by Paystack
               </p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-violet-900/30 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-gray-600">
-            &copy; {new Date().getFullYear()} Luxey Perfumes. All rights
-            reserved.
-          </p>
-          <div className="flex flex-wrap gap-4 sm:gap-6">
-            <Link href="/policies/privacy" className="text-xs text-gray-600 hover:text-violet-400">
-              Privacy Policy
-            </Link>
+          <div className="text-center md:text-left">
+            <p className="text-xs text-gray-600">
+              &copy; {new Date().getFullYear()} Luxey Perfumes. All rights reserved.
+            </p>
+            <p className="text-[10px] text-gray-700 mt-1">
+              Independent fragrance retail startup in Ghana
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             <Link href="/policies/terms" className="text-xs text-gray-600 hover:text-violet-400">
-              Terms &amp; Conditions
+              Terms
+            </Link>
+            <Link href="/policies/privacy" className="text-xs text-gray-600 hover:text-violet-400">
+              Privacy
+            </Link>
+            <Link href="/policies/refunds" className="text-xs text-gray-600 hover:text-violet-400">
+              Refunds
+            </Link>
+            <Link href="/policies/shipping" className="text-xs text-gray-600 hover:text-violet-400">
+              Shipping
             </Link>
             <Link href="/policies/cookies" className="text-xs text-gray-600 hover:text-violet-400">
               Cookies
             </Link>
-            <Link href="/policies/shipping" className="text-xs text-gray-600 hover:text-violet-400">
-              Shipping
+            <Link href="/policies/legal" className="text-xs text-gray-600 hover:text-violet-400">
+              Legal
             </Link>
           </div>
         </div>

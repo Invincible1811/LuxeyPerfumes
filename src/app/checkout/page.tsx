@@ -290,10 +290,12 @@ export default function CheckoutPage() {
                   Pay GH₵{totalPrice.toFixed(2)}
                 </button>
 
-                <p className="text-[10px] text-gray-400 text-center mt-3">
-                  Powered by Paystack. Supports cards, mobile money &amp;
-                  bank transfers.
-                </p>
+                <div className="text-center mt-4 space-y-1">
+                  <p className="text-xs font-medium text-gray-500">Secure Payment</p>
+                  <p className="text-[10px] text-gray-400">
+                    Payments are processed securely through Paystack. Your order will only be confirmed after successful payment authorization.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

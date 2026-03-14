@@ -297,7 +297,7 @@ export default function CheckoutPage() {
                 </div>
 
                 <a
-                  href="https://paystack.shop/pay/suo8ondsw-"
+                  href="https://paystack.shop/pay/rvba6hjpe9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center gap-2 text-sm tracking-[0.1em] uppercase py-4 rounded-xl transition-all border-2 border-violet-300 text-violet-700 hover:bg-violet-50 hover:border-violet-500"

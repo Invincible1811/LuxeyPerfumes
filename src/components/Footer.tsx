@@ -77,7 +77,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Company */}
+          {/* Company & Policies */}
           <div>
             <h4 className="text-xs tracking-[0.2em] text-violet-300 uppercase mb-6">
               Company
@@ -95,18 +95,24 @@ export default function Footer() {
               >
                 Contact Us
               </Link>
-              <a
-                href="#"
+              <Link
+                href="/policies/shipping"
                 className="block text-sm text-gray-500 hover:text-violet-300 transition-colors"
               >
-                Careers
-              </a>
-              <a
-                href="#"
+                Shipping &amp; Delivery
+              </Link>
+              <Link
+                href="/policies/refunds"
                 className="block text-sm text-gray-500 hover:text-violet-300 transition-colors"
               >
-                Press
-              </a>
+                Returns &amp; Refunds
+              </Link>
+              <Link
+                href="/policies/payment"
+                className="block text-sm text-gray-500 hover:text-violet-300 transition-colors"
+              >
+                Payment Info
+              </Link>
             </div>
           </div>
 
@@ -127,7 +133,7 @@ export default function Footer() {
                 <a href="tel:+2330200211226" className="hover:text-violet-300 transition-colors">+233 020 021 1226</a>
               </p>
               <p>
-                <a href="mailto:bernardbarnieh@gmail.com" className="hover:text-violet-300 transition-colors">bernardbarnieh@gmail.com</a>
+                <a href="mailto:info@luxeyperfumes.com" className="hover:text-violet-300 transition-colors">info@luxeyperfumes.com</a>
               </p>
               <p className="text-xs text-gray-600 pt-2">
                 Mon–Fri: 8AM–8PM
@@ -145,16 +151,19 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Luxey Perfumes. All rights
             reserved.
           </p>
-          <div className="flex gap-6">
-            <a href="#" className="text-xs text-gray-600 hover:text-violet-400">
+          <div className="flex flex-wrap gap-4 sm:gap-6">
+            <Link href="/policies/privacy" className="text-xs text-gray-600 hover:text-violet-400">
               Privacy Policy
-            </a>
-            <a href="#" className="text-xs text-gray-600 hover:text-violet-400">
-              Terms of Service
-            </a>
-            <a href="#" className="text-xs text-gray-600 hover:text-violet-400">
+            </Link>
+            <Link href="/policies/terms" className="text-xs text-gray-600 hover:text-violet-400">
+              Terms &amp; Conditions
+            </Link>
+            <Link href="/policies/cookies" className="text-xs text-gray-600 hover:text-violet-400">
+              Cookies
+            </Link>
+            <Link href="/policies/shipping" className="text-xs text-gray-600 hover:text-violet-400">
               Shipping
-            </a>
+            </Link>
           </div>
         </div>
       </div>

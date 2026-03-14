@@ -7,6 +7,7 @@ import { ToastProvider } from "@/components/Toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
+import CookieBanner from "@/components/CookieBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,6 +49,7 @@ export default function RootLayout({
               <CartDrawer />
               <main className="min-h-screen">{children}</main>
               <Footer />
+              <CookieBanner />
             </CartProvider>
           </WishlistProvider>
         </ToastProvider>

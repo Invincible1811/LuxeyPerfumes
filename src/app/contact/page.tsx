@@ -117,7 +117,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-sm text-gray-900">Email</p>
                     <p className="text-xs text-gray-500 mt-1">
-                      bernardbarnieh@gmail.com
+                      info@luxeyperfumes.com
                     </p>
                   </div>
                 </div>

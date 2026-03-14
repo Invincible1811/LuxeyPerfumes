@@ -1,49 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ShieldCheck, Truck, Lock, Loader2 } from "lucide-react";
+import { ArrowLeft, ShieldCheck, Truck, Lock } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 
 export default function CheckoutPage() {
   const { items, totalPrice } = useCart();
-  const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-
-  const handlePayment = async () => {
-    if (!email) {
-      setError("Please enter your email address");
-      return;
-    }
-    setError("");
-    setLoading(true);
-
-    try {
-      const res = await fetch("/api/paystack", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email,
-          amount: totalPrice,
-          items: items.map((i) => `${i.product.name} x${i.quantity}`).join(", "),
-        }),
-      });
-
-      const data = await res.json();
-
-      if (data.authorization_url) {
-        window.location.href = data.authorization_url;
-      } else {
-        setError(data.error || "Payment initialization failed. Please try again.");
-      }
-    } catch {
-      setError("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
 
   if (items.length === 0) {
     return (
@@ -133,30 +96,15 @@ export default function CheckoutPage() {
               </div>
             </div>
 
-            <div className="mt-6 space-y-3">
-              <input
-                type="email"
-                placeholder="Enter your email to pay"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3.5 border border-violet-200 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/10 transition-all"
-              />
-              {error && (
-                <p className="text-xs text-red-500 text-center">{error}</p>
-              )}
-              <button
-                onClick={handlePayment}
-                disabled={loading}
-                className="w-full flex items-center justify-center gap-2 text-sm tracking-[0.1em] uppercase py-4 rounded-xl transition-all shadow-lg bg-gradient-to-r from-violet-600 to-pink-500 text-white hover:from-violet-700 hover:to-pink-600 shadow-violet-500/25 disabled:opacity-60 disabled:cursor-not-allowed"
-              >
-                {loading ? (
-                  <Loader2 size={14} className="animate-spin" />
-                ) : (
-                  <Lock size={14} />
-                )}
-                {loading ? "Processing..." : `Pay GH₵${totalPrice.toFixed(2)}`}
-              </button>
-            </div>
+            <a
+              href="https://paystack.shop/pay/4pco28j60y"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full mt-6 flex items-center justify-center gap-2 text-sm tracking-[0.1em] uppercase py-4 rounded-xl transition-all shadow-lg bg-gradient-to-r from-violet-600 to-pink-500 text-white hover:from-violet-700 hover:to-pink-600 shadow-violet-500/25"
+            >
+              <Lock size={14} />
+              Pay via Paystack
+            </a>
 
             <div className="text-center mt-4 space-y-1">
               <p className="text-xs font-medium text-gray-500">Secure Payment</p>

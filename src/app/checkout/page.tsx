@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ShieldCheck, Truck, Lock } from "lucide-react";
+import { ArrowLeft, ShieldCheck, Truck, Lock, ExternalLink } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 
 declare global {
@@ -289,6 +289,22 @@ export default function CheckoutPage() {
                   <Lock size={14} />
                   Pay GH₵{totalPrice.toFixed(2)}
                 </button>
+
+                <div className="relative flex items-center my-5">
+                  <div className="flex-grow border-t border-violet-200/50"></div>
+                  <span className="mx-3 text-[10px] text-gray-400 uppercase tracking-wider">or</span>
+                  <div className="flex-grow border-t border-violet-200/50"></div>
+                </div>
+
+                <a
+                  href="https://paystack.shop/pay/suo8ondsw-"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center gap-2 text-sm tracking-[0.1em] uppercase py-4 rounded-xl transition-all border-2 border-violet-300 text-violet-700 hover:bg-violet-50 hover:border-violet-500"
+                >
+                  <ExternalLink size={14} />
+                  Pay via Paystack Link
+                </a>
 
                 <div className="text-center mt-4 space-y-1">
                   <p className="text-xs font-medium text-gray-500">Secure Payment</p>

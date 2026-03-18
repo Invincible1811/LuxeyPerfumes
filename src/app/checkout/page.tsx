@@ -127,8 +127,11 @@ export default function CheckoutPage() {
               </div>
               <div className="flex justify-between text-sm text-gray-500">
                 <span>Delivery</span>
-                <span className="text-green-600">Free</span>
+                <span className="text-amber-600 text-xs">Pay on Receipt</span>
               </div>
+              <p className="text-[10px] text-gray-400">
+                Delivery fee paid upon receipt — Customer pays the courier directly
+              </p>
               <div className="flex justify-between text-base font-semibold text-gray-900 pt-2 border-t border-violet-200/50">
                 <span>Total</span>
                 <span className="text-violet-700">
